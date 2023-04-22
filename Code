@@ -296,28 +296,28 @@ auc(test_tib_ather_stent$MALE, pred_tib_ather_stent)
 ci.auc(test_tib_ather_stent$MALE, pred_tib_ather_stent)
 
 perf_fem_angio <- prediction(pred_fem_angio, test_fem_angio$MALE)
-perf_fem_angio <- prediction(pred_fem_angio, "tpr","fpr)
+perf_fem_angio <- performance(perf_fem_angio, "tpr","fpr)
 
 perf_fem_ather <- prediction(pred_fem_ather, test_fem_ather$MALE)
-perf_fem_ather <- prediction(pred_fem_ather, "tpr","fpr)
+perf_fem_ather <- performance(perf_fem_ather, "tpr","fpr)
 
 perf_fem_stent <- prediction(pred_fem_stent, test_fem_stent$MALE)
-perf_fem_stent <- prediction(pred_fem_stent, "tpr","fpr)
+perf_fem_stent <- performance(perf_fem_stent, "tpr","fpr)
 
 perf_fem_ather_stent <- prediction(pred_fem_ather_stent, test_fem_ather_stent$MALE)
-perf_fem_ather_stent <- prediction(pred_fem_ather_stent, "tpr","fpr)
+perf_fem_ather_stent <- performance(perf_fem_ather_stent, "tpr","fpr)
 
 perf_tib_angio <- prediction(pred_tib_angio, test_tib_angio$MALE)
-perf_tib_angio <- prediction(pred_tib_angio, "tpr","fpr)
+perf_tib_angio <- performance(perf_tib_angio, "tpr","fpr)
 
 perf_tib_ather <- prediction(pred_tib_ather, test_tib_ather$MALE)
-perf_tib_ather <- prediction(pred_tib_ather, "tpr","fpr)
+perf_tib_ather <- performance(perf_tib_ather, "tpr","fpr)
 
 perf_tib_stent <- prediction(pred_tib_stent, test_tib_stent$MALE)
-perf_tib_stent <- prediction(pred_tib_stent, "tpr","fpr)
+perf_tib_stent <- performance(perf_tib_stent, "tpr","fpr)
 
 perf_tib_ather_stent <- prediction(pred_tib_ather_stent, test_tib_ather_stent$MALE)
-perf_tib_ather_stent <- prediction(pred_tib_ather_stent, "tpr","fpr)
+perf_tib_ather_stent <- performance(perf_tib_ather_stent, "tpr","fpr)
 
 plot(perf_fem_angio)
 plot(perf_fem_ather, add = TRUE, col = 'blue')
